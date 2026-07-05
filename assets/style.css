@@ -721,3 +721,18 @@ a:hover {
     50% { transform: translateY(-6px); }
     100% { transform: translateY(0); }
 }
+/* Make hero card text always light */
+.hero-card,
+.hero-card h2,
+.hero-card ul,
+.hero-card li {
+    color: #ffffff !important;
+}
+
+.hero-card ul {
+    color: #eaeaea !important;
+}
+
+.hero-card li::before {
+    color: var(--red) !important;
+}
