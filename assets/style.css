@@ -1,47 +1,38 @@
 /* =========================================================
-   GLOBAL TRANSITIONS
+   GLOBAL BASE
 ========================================================= */
 * {
-    transition: background-color 0.3s ease,
-                color 0.3s ease,
-                border-color 0.3s ease,
-                box-shadow 0.3s ease,
-                transform 0.2s ease;
+    box-sizing: border-box;
+    transition: background-color 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease,
+                transform 0.15s ease;
 }
-
-/* =========================================================
-   LIGHT THEME (DEFAULT)
-========================================================= */
 
 :root {
     --red: #c8102e;
     --red-dark: #8f0b21;
     --black: #111111;
+    --white: #ffffff;
 
-    --bg-light: #ffffff;
-    --bg-light-soft: #f7f7f9;
-    --card-light: #ffffff;
-    --text-dark: #1a1a1a;
-    --muted-dark: #666666;
-
-    --bg-dark: #050509;
-    --bg-dark-soft: #202030;
-    --card-dark: #181820;
-    --text-light: #eaeaea;
-    --muted-light: #b3b3b3;
+    --bg-page: #f5f6fa;
+    --bg-panel: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #666666;
 }
+
+/* Body */
 
 body {
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: radial-gradient(circle at top, #ffffff 0, #f0f0f4 55%);
-    color: var(--text-dark);
+    background: radial-gradient(circle at top, #ffffff 0, #f0f1f6 55%);
+    color: var(--text-main);
     line-height: 1.6;
 }
 
-/* =========================================================
-   LINKS
-========================================================= */
+/* Links */
 
 a {
     color: var(--red);
@@ -52,9 +43,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* =========================================================
-   LAYOUT
-========================================================= */
+/* Layout */
 
 .container {
     width: 100%;
@@ -64,7 +53,7 @@ a:hover {
 }
 
 /* =========================================================
-   HEADER
+   HEADER + NAV
 ========================================================= */
 
 .header {
@@ -72,7 +61,7 @@ a:hover {
     top: 0;
     z-index: 100;
     background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -80,18 +69,18 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.6rem 0;
+    padding: 0.7rem 0;
 }
 
 .brand {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: var(--text-dark);
+    color: var(--text-main);
 }
 
 .brand-logo {
-    height: 60px;
+    height: 56px;
     width: auto;
 }
 
@@ -109,12 +98,10 @@ a:hover {
 
 .brand-subtitle {
     font-size: 0.85rem;
-    color: var(--muted-dark);
+    color: var(--text-muted);
 }
 
-/* =========================================================
-   NAVIGATION
-========================================================= */
+/* Nav */
 
 .nav {
     display: flex;
@@ -124,21 +111,23 @@ a:hover {
 
 .nav-link {
     font-size: 0.85rem;
-    padding: 0.35rem 0.9rem;
+    padding: 0.4rem 0.9rem;
     border-radius: 999px;
-    color: var(--muted-dark);
+    color: var(--text-muted);
 }
 
 .nav-link:hover {
     background: rgba(200, 16, 46, 0.08);
     color: var(--black);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .nav-link.active {
     background: var(--red);
     color: #fff;
 }
+
+/* Nav toggle (mobile) */
 
 .nav-toggle {
     display: none;
@@ -159,39 +148,21 @@ a:hover {
 }
 
 /* =========================================================
-   THEME TOGGLE BUTTON
-========================================================= */
-
-.theme-toggle {
-    border: none;
-    padding: 0.4rem 0.8rem;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    cursor: pointer;
-    background: #f0f0f4;
-    color: var(--black);
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
-}
-
-.theme-toggle:hover {
-    transform: translateY(-1px);
-}
-
-/* =========================================================
-   HERO SECTIONS (LIGHT DEFAULT)
+   HERO
 ========================================================= */
 
 .hero {
-    padding: 2.8rem 0 3.2rem;
+    padding: 3rem 0 3.4rem;
 }
 
 .hero-home {
-    background: radial-gradient(circle at top left, #ffffff 0, #f7f7f9 55%);
+    background: radial-gradient(circle at top left, #ffffff 0, #f5f6fa 55%);
 }
 
 .hero-security,
 .hero-cleaning,
-.hero-employment {
+.hero-employment,
+.hero-housing {
     background: linear-gradient(135deg, #ffffff, #ffe5ea);
 }
 
@@ -202,27 +173,34 @@ a:hover {
     align-items: center;
 }
 
+.hero-tagline {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    padding: 0.25rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(200, 16, 46, 0.08);
+    color: var(--red-dark);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
 .hero-content h1 {
-    font-size: 2rem;
-    margin-bottom: 0.6rem;
+    font-size: 2.1rem;
+    margin-bottom: 0.7rem;
     color: var(--black);
 }
 
 .hero-content p {
-    color: var(--muted-dark);
-    margin-bottom: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 1.3rem;
 }
 
-.hero-tagline {
-    display: inline-block;
-    margin-bottom: 0.8rem;
-    padding: 0.25rem 0.8rem;
-    border-radius: 999px;
-    background: rgba(200, 16, 46, 0.08);
-    color: var(--red-dark);
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
 }
 
 .hero-panel {
@@ -231,9 +209,9 @@ a:hover {
 }
 
 .hero-card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 1.4rem;
+    background: var(--bg-panel);
+    border-radius: 14px;
+    padding: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.06);
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
     animation: floatCard 6s ease-in-out infinite;
@@ -248,7 +226,7 @@ a:hover {
 .hero-card ul {
     padding-left: 1.1rem;
     margin: 0.5rem 0 0;
-    color: var(--muted-dark);
+    color: var(--text-muted);
 }
 
 /* =========================================================
@@ -259,12 +237,13 @@ a:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.55rem 1.2rem;
+    padding: 0.6rem 1.3rem;
     border-radius: 999px;
     font-size: 0.9rem;
     font-weight: 600;
     border: 1px solid transparent;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .btn-primary {
@@ -295,38 +274,38 @@ a:hover {
 ========================================================= */
 
 .section {
-    padding: 2.6rem 0;
+    padding: 2.8rem 0;
 }
 
 .section-alt {
-    background: radial-gradient(circle at top, #ffffff 0, #f7f7f9 55%);
+    background: radial-gradient(circle at top, #ffffff 0, #f5f6fa 55%);
 }
 
 .section-contact {
-    background: radial-gradient(circle at bottom, #ffffff 0, #f7f7f9 55%);
+    background: radial-gradient(circle at bottom, #ffffff 0, #f5f6fa 55%);
 }
 
 .section-title {
     margin-top: 0;
     margin-bottom: 0.9rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: var(--black);
 }
 
 .section-subtitle {
     margin-top: 0;
     margin-bottom: 0.6rem;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--black);
 }
 
 .section-text {
-    color: var(--muted-dark);
+    color: var(--text-muted);
     max-width: 720px;
 }
 
 /* =========================================================
-   CARDS
+   CARDS + CORE SERVICES
 ========================================================= */
 
 .cards-grid {
@@ -337,25 +316,32 @@ a:hover {
 }
 
 .card {
-    background: var(--card-light);
-    border-radius: 12px;
-    padding: 1.2rem;
+    background: var(--bg-panel);
+    border-radius: 14px;
+    padding: 1.3rem;
     border: 1px solid rgba(0, 0, 0, 0.06);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
 }
 
 .card-service {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 220px;
 }
 
 .card-service h3 {
-    min-height: 48px;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: var(--black);
 }
 
 .card-service p {
-    min-height: 120px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    min-height: 110px;
 }
 
 .card:hover {
@@ -369,67 +355,226 @@ a:hover {
     top: 0.9rem;
     right: 0.9rem;
     font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
     padding: 0.2rem 0.6rem;
     border-radius: 999px;
     background: rgba(200, 16, 46, 0.08);
     color: var(--red-dark);
 }
 
+.card-link {
+    display: inline-block;
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--red);
+}
+
 /* =========================================================
-   DARK THEME OVERRIDES
+   LISTS + COLUMNS
 ========================================================= */
 
-body.dark-theme {
-    background: radial-gradient(circle at top, #202030 0, #050509 55%);
-    color: var(--text-light);
+.columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.4rem;
 }
 
-body.dark-theme .header {
-    background: rgba(5, 5, 9, 0.95);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+.check-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.4rem 0 0;
 }
 
-body.dark-theme .brand {
-    color: var(--text-light);
+.check-list li {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 0.4rem;
+    color: var(--text-muted);
 }
 
-body.dark-theme .nav-link {
-    color: var(--muted-light);
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--red);
+    font-weight: 700;
 }
 
-body.dark-theme .nav-link:hover {
-    background: rgba(255, 255, 255, 0.06);
-    color: var(--text-light);
+/* =========================================================
+   CONTACT GRID + FORM
+========================================================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
+    gap: 2rem;
+    align-items: flex-start;
 }
 
-body.dark-theme .hero-home {
-    background: radial-gradient(circle at top left, #2a2a3a 0, #050509 55%);
+.contact-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.6rem;
 }
 
-body.dark-theme .hero-security,
-body.dark-theme .hero-cleaning,
-body.dark-theme .hero-employment {
-    background: linear-gradient(135deg, #050509, var(--red-dark));
+.contact-list li {
+    margin-bottom: 0.4rem;
+    color: var(--text-muted);
 }
 
-body.dark-theme .hero-content h1 {
-    color: var(--text-light);
+.contact-form label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 0.7rem;
+    color: var(--text-muted);
 }
 
-body.dark-theme .hero-content p {
-    color: var(--muted-light);
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem 0.7rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #ffffff;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
 }
 
-body.dark-theme .hero-card {
-    background: var(--card-dark);
-    border-color: rgba(255, 255, 255, 0.06);
+.contact-form textarea {
+    resize: vertical;
 }
 
-body.dark-theme .card,
-body.dark-theme .gallery-item,
-body.dark-theme .review-card {
-    background: var(--card-dark);
-    border-color: rgba(255, 255, 255, 0.06);
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.4rem;
+}
+
+.gallery-item {
+    background: var(--bg-panel);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+.gallery-item figcaption {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* =========================================================
+   REVIEWS
+========================================================= */
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.4rem;
+    margin-top: 1.6rem;
+}
+
+.review-card {
+    background: var(--bg-panel);
+    border-radius: 12px;
+    padding: 1.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+    display: block;
+    text-decoration: none;
+}
+
+.review-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    border-color: var(--red);
+}
+
+.review-stars {
+    font-size: 1.1rem;
+    color: #ffd700;
+    margin-bottom: 0.4rem;
+}
+
+.review-text {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+}
+
+.review-author {
+    font-size: 0.85rem;
+    color: var(--text-main);
+    opacity: 0.85;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    background: #050509;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 1.8rem 0;
+    font-size: 0.85rem;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    color: #b3b3b3;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.footer-links a {
+    color: #b3b3b3;
+    font-size: 0.85rem;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatCard {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+    100% { transform: translateY(0); }
 }
 
 /* =========================================================
@@ -439,6 +584,20 @@ body.dark-theme .review-card {
 @media (max-width: 900px) {
     .hero-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero-panel {
+        justify-content: flex-start;
+        margin-top: 1.4rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
