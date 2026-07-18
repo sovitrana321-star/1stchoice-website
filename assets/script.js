@@ -8,29 +8,33 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-// Theme Toggle
+
+// Theme Toggle (Light default, Dark on toggle)
 document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("theme-toggle");
     const body = document.body;
 
+    if (!toggleBtn) return;
+
     // Load saved theme
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "light") {
-        body.classList.add("light-theme");
+    if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
         toggleBtn.textContent = "☀️ Light";
     } else {
+        // Default: light theme (no class)
         toggleBtn.textContent = "🌙 Dark";
     }
 
     toggleBtn.addEventListener("click", () => {
-        const isLight = body.classList.toggle("light-theme");
+        const isDark = body.classList.toggle("dark-theme");
 
-        if (isLight) {
+        if (isDark) {
             toggleBtn.textContent = "☀️ Light";
-            localStorage.setItem("theme", "light");
+            localStorage.setItem("theme", "dark");
         } else {
             toggleBtn.textContent = "🌙 Dark";
-            localStorage.setItem("theme", "dark");
+            localStorage.setItem("theme", "light");
         }
     });
 });
