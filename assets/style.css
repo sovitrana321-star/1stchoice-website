@@ -1,4 +1,6 @@
-/* Smooth transitions */
+/* =========================================================
+   GLOBAL TRANSITIONS
+========================================================= */
 * {
     transition: background-color 0.3s ease,
                 color 0.3s ease,
@@ -8,13 +10,14 @@
 }
 
 /* =========================================================
-   THEME VARIABLES (Light default, Dark on toggle)
-   ========================================================= */
+   LIGHT THEME (DEFAULT)
+========================================================= */
 
 :root {
     --red: #c8102e;
     --red-dark: #8f0b21;
     --black: #111111;
+
     --bg-light: #ffffff;
     --bg-light-soft: #f7f7f9;
     --card-light: #ffffff;
@@ -28,7 +31,6 @@
     --muted-light: #b3b3b3;
 }
 
-/* Default: LIGHT THEME */
 body {
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -37,7 +39,10 @@ body {
     line-height: 1.6;
 }
 
-/* Links */
+/* =========================================================
+   LINKS
+========================================================= */
+
 a {
     color: var(--red);
     text-decoration: none;
@@ -47,7 +52,10 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Container */
+/* =========================================================
+   LAYOUT
+========================================================= */
+
 .container {
     width: 100%;
     max-width: 1100px;
@@ -55,7 +63,10 @@ a:hover {
     padding: 0 1.25rem;
 }
 
-/* Header (light default) */
+/* =========================================================
+   HEADER
+========================================================= */
+
 .header {
     position: sticky;
     top: 0;
@@ -80,7 +91,7 @@ a:hover {
 }
 
 .brand-logo {
-    height: 60px; /* increased size */
+    height: 60px;
     width: auto;
 }
 
@@ -101,7 +112,10 @@ a:hover {
     color: var(--muted-dark);
 }
 
-/* Nav */
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
 .nav {
     display: flex;
     gap: 0.75rem;
@@ -113,13 +127,11 @@ a:hover {
     padding: 0.35rem 0.9rem;
     border-radius: 999px;
     color: var(--muted-dark);
-    transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .nav-link:hover {
     background: rgba(200, 16, 46, 0.08);
     color: var(--black);
-    text-decoration: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
@@ -128,7 +140,6 @@ a:hover {
     color: #fff;
 }
 
-/* Nav toggle (mobile) */
 .nav-toggle {
     display: none;
     width: 32px;
@@ -147,7 +158,10 @@ a:hover {
     border-radius: 999px;
 }
 
-/* Theme toggle button */
+/* =========================================================
+   THEME TOGGLE BUTTON
+========================================================= */
+
 .theme-toggle {
     border: none;
     padding: 0.4rem 0.8rem;
@@ -163,7 +177,10 @@ a:hover {
     transform: translateY(-1px);
 }
 
-/* Hero sections (light default) */
+/* =========================================================
+   HERO SECTIONS (LIGHT DEFAULT)
+========================================================= */
+
 .hero {
     padding: 2.8rem 0 3.2rem;
 }
@@ -172,19 +189,9 @@ a:hover {
     background: radial-gradient(circle at top left, #ffffff 0, #f7f7f9 55%);
 }
 
-.hero-security {
-    background: linear-gradient(135deg, #ffffff, #ffe5ea);
-}
-
-.hero-cleaning {
-    background: linear-gradient(135deg, #ffffff, #ffe5ea);
-}
-
+.hero-security,
+.hero-cleaning,
 .hero-employment {
-    background: linear-gradient(135deg, #ffffff, #ffe5ea);
-}
-
-.hero-housing {
     background: linear-gradient(135deg, #ffffff, #ffe5ea);
 }
 
@@ -206,7 +213,6 @@ a:hover {
     margin-bottom: 1.2rem;
 }
 
-/* Hero tagline overlay on homepage banner */
 .hero-tagline {
     display: inline-block;
     margin-bottom: 0.8rem;
@@ -216,14 +222,7 @@ a:hover {
     color: var(--red-dark);
     font-size: 0.85rem;
     font-weight: 600;
-    letter-spacing: 0.04em;
     text-transform: uppercase;
-}
-
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
 }
 
 .hero-panel {
@@ -252,7 +251,10 @@ a:hover {
     color: var(--muted-dark);
 }
 
-/* Buttons */
+/* =========================================================
+   BUTTONS
+========================================================= */
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -263,8 +265,6 @@ a:hover {
     font-weight: 600;
     border: 1px solid transparent;
     cursor: pointer;
-    text-decoration: none;
-    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
 }
 
 .btn-primary {
@@ -277,7 +277,6 @@ a:hover {
     background: var(--red-dark);
     border-color: var(--red-dark);
     transform: translateY(-1px);
-    text-decoration: none;
     box-shadow: 0 10px 24px rgba(200, 16, 46, 0.35);
 }
 
@@ -289,10 +288,12 @@ a:hover {
 
 .btn-outline:hover {
     background: rgba(0, 0, 0, 0.04);
-    text-decoration: none;
 }
 
-/* Sections */
+/* =========================================================
+   SECTIONS
+========================================================= */
+
 .section {
     padding: 2.6rem 0;
 }
@@ -324,7 +325,10 @@ a:hover {
     max-width: 720px;
 }
 
-/* Cards */
+/* =========================================================
+   CARDS
+========================================================= */
+
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -338,19 +342,20 @@ a:hover {
     padding: 1.2rem;
     border: 1px solid rgba(0, 0, 0, 0.06);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
-.card h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    color: var(--black);
+.card-service {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.card p {
-    color: var(--muted-dark);
-    font-size: 0.9rem;
+.card-service h3 {
+    min-height: 48px;
+}
+
+.card-service p {
+    min-height: 120px;
 }
 
 .card:hover {
@@ -359,258 +364,81 @@ a:hover {
     border-color: var(--red);
 }
 
-.card-service {
-    position: relative;
-    overflow: hidden;
-}
-
 .card-tag {
     position: absolute;
     top: 0.9rem;
     right: 0.9rem;
     font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
     padding: 0.2rem 0.6rem;
     border-radius: 999px;
     background: rgba(200, 16, 46, 0.08);
     color: var(--red-dark);
 }
 
-.card-link {
-    display: inline-block;
-    margin-top: 0.8rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--red);
+/* =========================================================
+   DARK THEME OVERRIDES
+========================================================= */
+
+body.dark-theme {
+    background: radial-gradient(circle at top, #202030 0, #050509 55%);
+    color: var(--text-light);
 }
 
-/* Lists */
-.check-list {
-    list-style: none;
-    padding-left: 0;
-    margin: 0.4rem 0 0;
+body.dark-theme .header {
+    background: rgba(5, 5, 9, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.check-list li {
-    position: relative;
-    padding-left: 1.4rem;
-    margin-bottom: 0.4rem;
-    color: var(--muted-dark);
+body.dark-theme .brand {
+    color: var(--text-light);
 }
 
-.check-list li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--red);
-    font-weight: 700;
+body.dark-theme .nav-link {
+    color: var(--muted-light);
 }
 
-/* Columns */
-.columns {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.4rem;
+body.dark-theme .nav-link:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-light);
 }
 
-/* Contact */
-.contact-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
-    gap: 2rem;
+body.dark-theme .hero-home {
+    background: radial-gradient(circle at top left, #2a2a3a 0, #050509 55%);
 }
 
-.contact-list {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0.6rem;
+body.dark-theme .hero-security,
+body.dark-theme .hero-cleaning,
+body.dark-theme .hero-employment {
+    background: linear-gradient(135deg, #050509, var(--red-dark));
 }
 
-.contact-list li {
-    margin-bottom: 0.4rem;
-    color: var(--muted-dark);
+body.dark-theme .hero-content h1 {
+    color: var(--text-light);
 }
 
-.contact-form label {
-    display: block;
-    font-size: 0.85rem;
-    margin-bottom: 0.7rem;
-    color: var(--muted-dark);
+body.dark-theme .hero-content p {
+    color: var(--muted-light);
 }
 
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-    width: 100%;
-    padding: 0.45rem 0.6rem;
-    border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.16);
-    background: #ffffff;
-    color: var(--text-dark);
-    font-size: 0.85rem;
-    margin-top: 0.2rem;
+body.dark-theme .hero-card {
+    background: var(--card-dark);
+    border-color: rgba(255, 255, 255, 0.06);
 }
 
-.contact-form textarea {
-    resize: vertical;
+body.dark-theme .card,
+body.dark-theme .gallery-item,
+body.dark-theme .review-card {
+    background: var(--card-dark);
+    border-color: rgba(255, 255, 255, 0.06);
 }
 
-/* Gallery */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 1.25rem;
-    margin-top: 1.4rem;
-}
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-.gallery-item {
-    background: var(--card-light);
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-}
-
-.gallery-item img {
-    width: 100%;
-    display: block;
-}
-
-.gallery-item figcaption {
-    padding: 0.6rem 0.8rem;
-    font-size: 0.85rem;
-    color: var(--muted-dark);
-}
-
-/* Reviews */
-.reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.4rem;
-    margin-top: 1.6rem;
-}
-
-.review-card {
-    background: var(--card-light);
-    border-radius: 12px;
-    padding: 1.2rem;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
-    display: block;
-    text-decoration: none;
-}
-
-.review-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-    border-color: var(--red);
-}
-
-.review-stars {
-    font-size: 1.1rem;
-    color: #ffd700;
-    margin-bottom: 0.4rem;
-}
-
-.review-text {
-    color: var(--muted-dark);
-    font-size: 0.9rem;
-    margin-bottom: 0.6rem;
-}
-
-.review-author {
-    font-size: 0.85rem;
-    color: var(--text-dark);
-    opacity: 0.8;
-}
-
-/* Footer */
-.footer {
-    background: #f5f5f7;
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
-    padding: 1.6rem 0;
-    font-size: 0.85rem;
-}
-
-.footer-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    color: var(--muted-dark);
-}
-
-.footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
-
-.footer-links a {
-    color: var(--muted-dark);
-    font-size: 0.85rem;
-}
-
-/* IPSA / ISO logos section */
-.accreditation-strip {
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    align-items: center;
-}
-
-.accreditation-strip img {
-    height: 48px;
-    width: auto;
-}
-
-.accreditation-strip span {
-    font-size: 0.9rem;
-    color: var(--muted-dark);
-}
-
-/* Animations */
-@keyframes floatCard {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
-    100% { transform: translateY(0); }
-}
-
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive */
 @media (max-width: 900px) {
     .hero-grid {
         grid-template-columns: 1fr;
-    }
-
-    .hero-panel {
-        justify-content: flex-start;
-        margin-top: 1.4rem;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
     }
 }
 
@@ -633,139 +461,4 @@ a:hover {
     .nav-toggle {
         display: inline-block;
     }
-}
-
-/* =========================================================
-   DARK THEME OVERRIDES (body.dark-theme)
-   ========================================================= */
-
-body.dark-theme {
-    background: radial-gradient(circle at top, #202030 0, #050509 55%);
-    color: var(--text-light);
-}
-
-/* Header dark */
-body.dark-theme .header {
-    background: rgba(5, 5, 9, 0.95);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-body.dark-theme .brand {
-    color: var(--text-light);
-}
-
-body.dark-theme .brand-subtitle {
-    color: var(--muted-light);
-}
-
-body.dark-theme .nav-link {
-    color: var(--muted-light);
-}
-
-body.dark-theme .nav-link:hover {
-    background: rgba(255, 255, 255, 0.06);
-    color: var(--text-light);
-    box-shadow: none;
-}
-
-body.dark-theme .nav-link.active {
-    background: var(--red);
-    color: #fff;
-}
-
-body.dark-theme .nav-toggle span {
-    background: var(--text-light);
-}
-
-/* Hero dark */
-body.dark-theme .hero-home {
-    background: radial-gradient(circle at top left, #2a2a3a 0, #050509 55%);
-}
-
-body.dark-theme .hero-security,
-body.dark-theme .hero-cleaning,
-body.dark-theme .hero-employment,
-body.dark-theme .hero-housing {
-    background: linear-gradient(135deg, #050509, var(--red-dark));
-}
-
-body.dark-theme .hero-content h1 {
-    color: var(--text-light);
-}
-
-body.dark-theme .hero-content p {
-    color: var(--muted-light);
-}
-
-body.dark-theme .hero-tagline {
-    background: rgba(255, 255, 255, 0.08);
-    color: #ffffff;
-}
-
-/* Cards dark */
-body.dark-theme .card,
-body.dark-theme .gallery-item,
-body.dark-theme .review-card {
-    background: var(--card-dark);
-    border-color: rgba(255, 255, 255, 0.06);
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
-}
-
-body.dark-theme .card p,
-body.dark-theme .gallery-item figcaption,
-body.dark-theme .review-text,
-body.dark-theme .review-author,
-body.dark-theme .section-text,
-body.dark-theme .contact-list li {
-    color: var(--muted-light);
-}
-
-body.dark-theme .section-title,
-body.dark-theme .section-subtitle {
-    color: var(--text-light);
-}
-
-/* Sections dark */
-body.dark-theme .section-alt,
-body.dark-theme .section-contact {
-    background: radial-gradient(circle at top, #202030 0, #050509 55%);
-}
-
-/* Contact form dark */
-body.dark-theme .contact-form input,
-body.dark-theme .contact-form select,
-body.dark-theme .contact-form textarea {
-    background: rgba(10, 10, 16, 0.9);
-    border-color: rgba(255, 255, 255, 0.16);
-    color: var(--text-light);
-}
-
-/* Footer dark */
-body.dark-theme .footer {
-    background: #050509;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-body.dark-theme .footer-inner,
-body.dark-theme .footer-links a {
-    color: var(--muted-light);
-}
-
-/* Theme toggle dark */
-body.dark-theme .theme-toggle {
-    background: var(--card-dark);
-    color: var(--text-light);
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
-}
-
-/* Hero card text always light in dark mode */
-body.dark-theme .hero-card,
-body.dark-theme .hero-card h2,
-body.dark-theme .hero-card ul,
-body.dark-theme .hero-card li {
-    color: #ffffff !important;
-}
-
-body.dark-theme .hero-card ul {
-    color: #eaeaea !important;
 }
