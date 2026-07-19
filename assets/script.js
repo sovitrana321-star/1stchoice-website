@@ -9,7 +9,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+// COOKIE BANNER
+    const cookieBanner = document.getElementById("cookieBanner");
+    const cookieAccept = document.getElementById("cookieAccept");
 
+    if (cookieBanner && cookieAccept) {
+        const hasConsent = localStorage.getItem("cookieConsent") === "true";
+
+        if (!hasConsent) {
+            cookieBanner.style.display = "flex";
+        }
+
+        cookieAccept.addEventListener("click", () => {
+            localStorage.setItem("cookieConsent", "true");
+            cookieBanner.style.display = "none";
+        });
+    }
+});
 // WHATSAPP ENQUIRY FORM
 function sendToWhatsApp() {
     const name = document.getElementById("name").value.trim();
@@ -30,3 +46,14 @@ function sendToWhatsApp() {
 
     window.open(url, "_blank");
 }
+// PAGE LOADER FADE OUT
+window.addEventListener("load", () => {
+    const loader = document.getElementById("pageLoader");
+    if (loader) {
+        loader.style.opacity = "0";
+        loader.style.transition = "opacity 0.4s ease";
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 400);
+    }
+});
