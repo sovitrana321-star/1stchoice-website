@@ -46,14 +46,3 @@ function sendToWhatsApp() {
 
     window.open(url, "_blank");
 }
-// PAGE LOADER FADE OUT
-window.addEventListener("load", () => {
-    const loader = document.getElementById("pageLoader");
-    if (loader) {
-        loader.style.opacity = "0";
-        loader.style.transition = "opacity 0.4s ease";
-        setTimeout(() => {
-            loader.style.display = "none";
-        }, 400);
-    }
-});
