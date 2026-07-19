@@ -73,8 +73,9 @@ a:hover {
     color: var(--text-main);
 }
 
+/* ⭐ Bigger logo (Monir request) */
 .brand-logo {
-    height: 52px;
+    height: 72px;
     width: auto;
 }
 
@@ -145,7 +146,7 @@ a:hover {
     position: relative;
     width: 100%;
     min-height: 380px;
-    background-image: url("assets/images/hero-main.jpg"); /* YOU WILL REPLACE THIS IMAGE */
+    background-image: url("assets/images/hero-main.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -185,9 +186,12 @@ a:hover {
     margin-bottom: 0.4rem;
 }
 
+/* ⭐ Subheading overlay (Monir request) */
 .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: 500;
 }
 
 .hero-text {
@@ -461,6 +465,38 @@ a:hover {
     font-size: 0.85rem;
     color: var(--text-main);
     opacity: 0.85;
+}
+
+/* =========================================================
+   IMAGE BLOCKS ABOVE FOOTER (Monir request)
+========================================================= */
+
+.image-blocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.4rem;
+    margin: 2rem 0;
+}
+
+.image-blocks img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+/* =========================================================
+   ACCREDITATION STRIP (IPSA + ISO)
+========================================================= */
+
+.accreditation-strip {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.accreditation-strip img {
+    height: 80px;
+    margin: 0 1rem;
+    object-fit: contain;
 }
 
 /* =========================================================
