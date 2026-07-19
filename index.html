@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+
+<!-- HEADER -->
 <header class="header">
     <div class="container header-inner">
         <a href="index.html" class="brand">
@@ -17,6 +19,7 @@
                 <span class="brand-subtitle">Security • Cleaning • Employment Support</span>
             </div>
         </a>
+
         <nav class="nav" id="nav">
             <a href="index.html" class="nav-link active">Home</a>
             <a href="security.html" class="nav-link">Security</a>
@@ -24,23 +27,30 @@
             <a href="employment.html" class="nav-link">Employment</a>
             <a href="#contact" class="nav-link">Contact</a>
         </nav>
+
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
             <span></span><span></span><span></span>
         </button>
     </div>
 </header>
 
-<!-- HERO BANNER (GODADDY STYLE) -->
+<!-- HERO BANNER -->
 <section class="hero-banner fade-in">
     <div class="hero-overlay"></div>
+
     <div class="hero-content">
         <span class="hero-tagline">Bridging the gap with employment and support</span>
+
         <h1 class="hero-title">Innovative Multi-Service Solutions</h1>
+
+        <!-- SUBHEADING OVERLAY (Monir request) -->
         <p class="hero-subtitle">Your trusted partner for security, cleaning and employment support across Birmingham and the West Midlands.</p>
+
         <p class="hero-text">
             1stChoice Connected Limited delivers professional security services, reliable cleaning solutions and structured
             employment support pathways—connecting people and businesses to dependable support.
         </p>
+
         <div class="hero-actions">
             <a href="security.html" class="btn btn-primary">Explore Security Services</a>
             <a href="#contact" class="btn btn-outline">Talk to Us</a>
@@ -48,7 +58,7 @@
     </div>
 </section>
 
-<!-- ABOUT + BIG IMAGE BLOCK -->
+<!-- ABOUT SECTION -->
 <section class="section section-light">
     <div class="container banner-block">
         <div class="banner-text">
@@ -63,51 +73,50 @@
                 services—whether that’s work, training, safe environments or site protection.
             </p>
         </div>
+
         <div class="banner-image">
             <img src="assets/images/about-main.jpg" alt="Team working together in office">
         </div>
     </div>
 </section>
 
-<!-- CORE SERVICES (CARDS) -->
+<!-- CORE SERVICES -->
 <section class="section section-soft">
     <div class="container">
         <h2 class="section-title">Our Core Service Areas</h2>
         <p class="section-text">
             We operate across three main service areas, providing joined-up support for businesses, venues, landlords and individuals.
         </p>
+
         <div class="cards-grid">
             <a href="security.html" class="card card-service">
                 <h3>Security Services</h3>
-                <p>
-                    SIA-licensed manned guarding, door supervision, event security, concierge and site support, mobile patrols,
-                    retail and construction site security.
-                </p>
+                <p>SIA-licensed manned guarding, door supervision, event security, concierge and site support, mobile patrols,
+                    retail and construction site security.</p>
             </a>
+
             <a href="cleaning.html" class="card card-service">
                 <h3>Cleaning Services</h3>
-                <p>
-                    Domestic and commercial cleaning, deep cleans, end-of-tenancy cleans, HMO and landlord support, communal area
-                    cleaning and scheduled visits.
-                </p>
+                <p>Domestic and commercial cleaning, deep cleans, Airbnb turnover cleaning, HMO and landlord support, communal area
+                    cleaning and scheduled visits.</p>
             </a>
+
             <a href="employment.html" class="card card-service">
                 <h3>Employment Support & Apprenticeships</h3>
-                <p>
-                    CV support, interview preparation, job applications, job fair events, career coaching and apprenticeship pathways
-                    in business, digital, customer service and more.
-                </p>
+                <p>CV support, interview preparation, job applications, job fair events, career coaching and apprenticeship pathways
+                    in business, digital, customer service and more.</p>
             </a>
         </div>
     </div>
 </section>
 
-<!-- WHY CHOOSE US (CORPORATE BLOCK) -->
+<!-- WHY CHOOSE US -->
 <section class="section section-light">
     <div class="container banner-block reverse">
         <div class="banner-image">
             <img src="assets/images/why-main.jpg" alt="Professional meeting in office">
         </div>
+
         <div class="banner-text">
             <h2 class="section-title">Why Choose Us?</h2>
             <ul class="check-list">
@@ -124,7 +133,7 @@
     </div>
 </section>
 
-<!-- CONTACT + WHATSAPP ENQUIRY -->
+<!-- CONTACT SECTION -->
 <section class="section section-soft" id="contact">
     <div class="container contact-grid">
         <div>
@@ -132,6 +141,7 @@
             <p class="section-text">
                 Ready to discuss security, cleaning or employment support services? Reach out using the details below.
             </p>
+
             <ul class="contact-list">
                 <li><strong>Google Business Profile:</strong>
                     <a href="https://maps.app.goo.gl/488ueiBdC78xoh2K9?g_st=ic" target="_blank">View on Google Maps</a>
@@ -155,18 +165,19 @@
 
         <div>
             <h3 class="section-subtitle">Quick Enquiry (WhatsApp)</h3>
-            <p class="section-text">
-                Fill in the form and we’ll open WhatsApp with your enquiry ready to send.
-            </p>
+            <p class="section-text">Fill in the form and we’ll open WhatsApp with your enquiry ready to send.</p>
+
             <form class="contact-form" onsubmit="sendToWhatsApp(); return false;">
                 <label>
                     Name
                     <input type="text" id="name" required>
                 </label>
+
                 <label>
                     Email
                     <input type="email" id="email" required>
                 </label>
+
                 <label>
                     Service of interest
                     <select id="service">
@@ -176,49 +187,64 @@
                         <option>Other</option>
                     </select>
                 </label>
+
                 <label>
                     Message
                     <textarea id="message" rows="4" required></textarea>
                 </label>
+
                 <button type="submit" class="btn btn-primary">Send via WhatsApp</button>
             </form>
         </div>
     </div>
 </section>
 
-<!-- CUSTOMER REVIEWS (CARDS) -->
+<!-- IMAGE BLOCKS ABOVE FOOTER -->
+<section class="section section-light">
+    <div class="container">
+        <h2 class="section-title">Our Work in Action</h2>
+
+        <div class="image-blocks">
+            <img src="assets/images/home-img1.jpg" alt="">
+            <img src="assets/images/home-img2.jpg" alt="">
+            <img src="assets/images/home-img3.jpg" alt="">
+            <img src="assets/images/home-img4.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- ACCREDITATION LOGOS -->
+<section class="accreditation-strip">
+    <img src="assets/images/ipsa.jpg" alt="IPSA Accreditation Logo">
+    <img src="assets/images/iso.jpg" alt="ISO Standards Logo">
+</section>
+
+<!-- REVIEWS -->
 <section class="section section-light">
     <div class="container">
         <h2 class="section-title">Customer Reviews</h2>
-        <p class="section-text">
-            Here are some of the reviews left by our clients. Click any review to see the real Google reviews.
-        </p>
+        <p class="section-text">Here are some of the reviews left by our clients.</p>
 
         <div class="reviews-grid">
-            <a href="https://www.google.com/maps/place/1stChoice+Connected+Limited/@52.4576169,-1.818073,72206m/data=!3m1!1e3!4m8!3m7!1s0xa41fa2d2af7c1457:0xbfa9483905ad7845!8m2!3d52.4576168!4d-1.818073!9m1!1b1!16s%2Fg%2F11z0yv2283!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D"
-               target="_blank" class="review-card">
+            <a href="#" class="review-card">
                 <div class="review-stars">★★★★★</div>
                 <p class="review-text">“Very professional and reliable service. Highly recommended!”</p>
                 <div class="review-author">— Pratish Rana</div>
             </a>
 
-            <a href="https://www.google.com/maps/place/1stChoice+Connected+Limited/@52.4576169,-1.818073,72206m/data=!3m1!1e3!4m8!3m7!1s0xa41fa2d2af7c1457:0xbfa9483905ad7845!8m2!3d52.4576168!4d-1.818073!9m1!1b1!16s%2Fg%2F11z0yv2283!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D"
-               target="_blank" class="review-card">
+            <a href="#" class="review-card">
                 <div class="review-stars">★★★★★</div>
                 <p class="review-text">“Good experience”</p>
                 <div class="review-author">— Pawan Rana</div>
             </a>
 
-            <a href="https://www.google.com/maps/place/1stChoice+Connected+Limited/@52.4576169,-1.818073,72206m/data=!3m1!1e3!4m8!3m7!1s0xa41fa2d2af7c1457:0xbfa9483905ad7845!8m2!3d52.4576168!4d-1.818073!9m1!1b1!16s%2Fg%2F11z0yv2283!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D"
-               target="_blank" class="review-card">
+            <a href="#" class="review-card">
                 <div class="review-stars">★★★★★</div>
-                <p class="review-text">“Great experience
-Lovely meeting the staff members”</p>
+                <p class="review-text">“Great experience. Lovely meeting the staff members.”</p>
                 <div class="review-author">— Rina Magar</div>
             </a>
 
-            <a href="https://www.google.com/maps/place/1stChoice+Connected+Limited/@52.4576169,-1.818073,72206m/data=!3m1!1e3!4m8!3m7!1s0xa41fa2d2af7c1457:0xbfa9483905ad7845!8m2!3d52.4576168!4d-1.818073!9m1!1b1!16s%2Fg%2F11z0yv2283!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D"
-               target="_blank" class="review-card">
+            <a href="#" class="review-card">
                 <div class="review-stars">★★★★★</div>
                 <p class="review-text"></p>
                 <div class="review-author">— Sylvia Yemoh</div>
@@ -226,24 +252,23 @@ Lovely meeting the staff members”</p>
         </div>
 
         <div style="margin-top: 1.5rem;">
-            <a href="https://search.google.com/local/writereview?placeid=ChIJVxR8r9KiH6QRRXitBTlIqb8"
-               target="_blank" class="btn btn-primary">
-                Leave a Review on Google
-            </a>
+            <a href="#" class="btn btn-primary">Leave a Review on Google</a>
         </div>
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
     <div class="container footer-inner">
         <div>
             <strong>1stChoice Connected Limited</strong><br>
             Birmingham | Security | Cleaning | Employment Support & Apprenticeships
         </div>
+
         <div class="footer-links">
             <a href="https://www.instagram.com/1stchoiceconnected" target="_blank">Instagram</a>
             <a href="https://www.facebook.com/share/18r9tC6Mcq/?mibextid=wwXIfr" target="_blank">Facebook</a>
-            <a href="https://wa.me/447305692969?text=Hello%20I%20would%20like%20to%20make%20an%20enquiry" target="_blank">WhatsApp</a>
+            <a href="https://wa.me/447305692969" target="_blank">WhatsApp</a>
             <a href="https://www.linkedin.com/in/monir-s-8a2424201" target="_blank">Monir on LinkedIn</a>
         </div>
     </div>
