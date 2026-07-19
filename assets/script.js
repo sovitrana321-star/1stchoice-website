@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
             nav.classList.toggle("open");
         });
     }
-});
  // COOKIE BANNER
     const cookieBanner = document.getElementById("cookieBanner");
     const cookieAccept = document.getElementById("cookieAccept");
