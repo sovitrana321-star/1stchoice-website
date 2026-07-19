@@ -9,19 +9,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-// COOKIE BANNER
+ // COOKIE BANNER
     const cookieBanner = document.getElementById("cookieBanner");
     const cookieAccept = document.getElementById("cookieAccept");
+    const cookieReject = document.getElementById("cookieReject");
 
-    if (cookieBanner && cookieAccept) {
-        const hasConsent = localStorage.getItem("cookieConsent") === "true";
+    if (cookieBanner && cookieAccept && cookieReject) {
+        const consent = localStorage.getItem("cookieConsent");
 
-        if (!hasConsent) {
+        // show banner only if no choice yet
+        if (consent !== "accepted" && consent !== "rejected") {
             cookieBanner.style.display = "flex";
         }
 
         cookieAccept.addEventListener("click", () => {
-            localStorage.setItem("cookieConsent", "true");
+            localStorage.setItem("cookieConsent", "accepted");
+            cookieBanner.style.display = "none";
+        });
+
+        cookieReject.addEventListener("click", () => {
+            localStorage.setItem("cookieConsent", "rejected");
             cookieBanner.style.display = "none";
         });
     }
