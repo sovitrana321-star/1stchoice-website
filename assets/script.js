@@ -1,3 +1,4 @@
+// MOBILE NAVIGATION TOGGLE
 document.addEventListener("DOMContentLoaded", () => {
     const navToggle = document.getElementById("navToggle");
     const nav = document.getElementById("nav");
@@ -9,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// WHATSAPP ENQUIRY FORM
 function sendToWhatsApp() {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
@@ -16,6 +18,7 @@ function sendToWhatsApp() {
     const message = document.getElementById("message").value.trim();
 
     const baseUrl = "https://wa.me/447305692969?text=";
+
     const text =
         "New enquiry from website%0A%0A" +
         "*Name:* " + encodeURIComponent(name) + "%0A" +
@@ -24,5 +27,6 @@ function sendToWhatsApp() {
         "*Message:* " + encodeURIComponent(message);
 
     const url = baseUrl + text;
+
     window.open(url, "_blank");
 }
