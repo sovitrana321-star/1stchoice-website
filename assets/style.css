@@ -146,13 +146,41 @@ a:hover {
     position: relative;
     width: 100%;
     min-height: 380px;
-    background-image: url("assets/images/hero-main.jpg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #ffffff;
+}
+/* ============================
+   PAGE-SPECIFIC HERO BANNERS
+============================ */
+
+/* Home */
+.hero-home {
+    background-image: url("assets/images/hero-main.jpg");
+}
+
+/* Security */
+.hero-security {
+    background-image: url("assets/images/security-banner.jpg");
+}
+
+/* Cleaning */
+.hero-cleaning {
+    background-image: url("assets/images/cleaning-banner.jpg");
+}
+
+/* Employment */
+.hero-employment {
+    background-image: url("assets/images/employment-banner.jpg");
+}
+
+/* Housing (if needed) */
+.hero-housing {
+    background-image: url("assets/images/housing-banner.jpg");
 }
 
 .hero-overlay {
