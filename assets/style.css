@@ -178,11 +178,6 @@ a:hover {
     background-image: url("assets/images/employment-banner.jpg");
 }
 
-/* Housing (if needed) */
-.hero-housing {
-    background-image: url("assets/images/housing-banner.jpg");
-}
-
 .hero-overlay {
     position: absolute;
     inset: 0;
