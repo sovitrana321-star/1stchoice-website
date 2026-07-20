@@ -160,22 +160,22 @@ a:hover {
 
 /* Home */
 .hero-home {
-    background-image: url("assets/images/hero-main.jpg");
+    background-image: url("assets/images/bn1.jpg");
 }
 
 /* Security */
 .hero-security {
-    background-image: url("assets/images/security-banner.jpg");
+    background-image: url("assets/images/bn2.jpg");
 }
 
 /* Cleaning */
 .hero-cleaning {
-    background-image: url("assets/images/cleaning-banner.jpg");
+    background-image: url("assets/images/bn3.jpg");
 }
 
 /* Employment */
 .hero-employment {
-    background-image: url("assets/images/employment-banner.jpg");
+    background-image: url("assets/images/bn4.jpg");
 }
 
 .hero-overlay {
