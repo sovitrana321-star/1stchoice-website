@@ -155,29 +155,6 @@ a:hover {
     justify-content: center;
     color: #ffffff;
 }
-/* ============================
-   PAGE-SPECIFIC HERO BANNERS
-============================ */
-
-/* Home */
-.hero-home {
-    background-image: url("assets/images/bn1.jpg");
-}
-
-/* Security */
-.hero-security {
-    background-image: url("assets/images/bn2.jpg");
-}
-
-/* Cleaning */
-.hero-cleaning {
-    background-image: url("assets/images/bn3.jpg");
-}
-
-/* Employment */
-.hero-employment {
-    background-image: url("assets/images/bn4.jpg");
-}
 
 .hero-overlay {
     position: absolute;
