@@ -167,6 +167,7 @@
             <h3 class="section-subtitle">Quick Enquiry (WhatsApp)</h3>
             <p class="section-text">Fill in the form and we’ll open WhatsApp with your enquiry ready to send.</p>
 
+            <!-- WHATSAPP FORM (unchanged) -->
             <form class="contact-form" onsubmit="sendToWhatsApp(); return false;">
                 <label>
                     Name
@@ -194,6 +195,39 @@
                 </label>
 
                 <button type="submit" class="btn btn-primary">Send via WhatsApp</button>
+            </form>
+
+            <!-- EMAIL FORM (new) -->
+            <h3 class="section-subtitle" style="margin-top: 30px;">Quick Enquiry (Email)</h3>
+            <p class="section-text">Prefer email? Send your enquiry directly to us.</p>
+
+            <form class="contact-form" action="https://formspree.io/f/meeyvaza" method="POST">
+                <label>
+                    Name
+                    <input type="text" name="name" required>
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" name="email" required>
+                </label>
+
+                <label>
+                    Service of interest
+                    <select name="service">
+                        <option>Security Services</option>
+                        <option>Cleaning Services</option>
+                        <option>Employment Support & Apprenticeships</option>
+                        <option>Other</option>
+                    </select>
+                </label>
+
+                <label>
+                    Message
+                    <textarea name="message" rows="4" required></textarea>
+                </label>
+
+                <button type="submit" class="btn btn-secondary">Send via Email</button>
             </form>
         </div>
     </div>
