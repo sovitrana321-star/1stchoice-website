@@ -164,24 +164,25 @@
         </div>
 
         <div>
-            <h3 class="section-subtitle">Quick Enquiry (WhatsApp)</h3>
-            <p class="section-text">Fill in the form and we’ll open WhatsApp with your enquiry ready to send.</p>
+            <h3 class="section-subtitle">Quick Enquiry</h3>
+            <p class="section-text">Fill in the form and choose how you want to send your enquiry.</p>
 
-            <!-- WHATSAPP FORM (unchanged) -->
-            <form class="contact-form" onsubmit="sendToWhatsApp(); return false;">
+            <!-- UNIFIED FORM -->
+            <form class="contact-form" id="unifiedForm">
+
                 <label>
                     Name
-                    <input type="text" id="name" required>
+                    <input type="text" id="name" name="name" required>
                 </label>
 
                 <label>
                     Email
-                    <input type="email" id="email" required>
+                    <input type="email" id="email" name="email" required>
                 </label>
 
                 <label>
                     Service of interest
-                    <select id="service">
+                    <select id="service" name="service">
                         <option>Security Services</option>
                         <option>Cleaning Services</option>
                         <option>Employment Support & Apprenticeships</option>
@@ -191,43 +192,18 @@
 
                 <label>
                     Message
-                    <textarea id="message" rows="4" required></textarea>
+                    <textarea id="message" name="message" rows="4" required></textarea>
                 </label>
 
-                <button type="submit" class="btn btn-primary">Send via WhatsApp</button>
-            </form>
+                <!-- BUTTONS -->
+                <div class="button-row" style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <button type="button" class="btn btn-primary" onclick="sendToWhatsApp()">Send via WhatsApp</button>
 
-            <!-- EMAIL FORM (new) -->
-            <h3 class="section-subtitle" style="margin-top: 30px;">Quick Enquiry (Email)</h3>
-            <p class="section-text">Prefer email? Send your enquiry directly to us.</p>
+                    <button type="submit" class="btn btn-primary" formaction="https://formspree.io/f/meeyvaza" formmethod="POST">
+                        Send via Email
+                    </button>
+                </div>
 
-            <form class="contact-form" action="https://formspree.io/f/meeyvaza" method="POST">
-                <label>
-                    Name
-                    <input type="text" name="name" required>
-                </label>
-
-                <label>
-                    Email
-                    <input type="email" name="email" required>
-                </label>
-
-                <label>
-                    Service of interest
-                    <select name="service">
-                        <option>Security Services</option>
-                        <option>Cleaning Services</option>
-                        <option>Employment Support & Apprenticeships</option>
-                        <option>Other</option>
-                    </select>
-                </label>
-
-                <label>
-                    Message
-                    <textarea name="message" rows="4" required></textarea>
-                </label>
-
-                <button type="submit" class="btn btn-secondary">Send via Email</button>
             </form>
         </div>
     </div>
